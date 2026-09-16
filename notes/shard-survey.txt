@@ -1,0 +1,9 @@
+dtype totals: {'BF16': 179999981424, 'I64': 35}
+total params: 179999981459
+tensors: 1658 total_size(GiB): 335.3
+embed_head tensors=    2 files=  2
+experts    tensors=  288 files= 96
+mtp        tensors=   31 files= 28
+ngram      tensors=  137 files= 33
+trunk      tensors=  867 files= 51
+vision     tensors=  333 files=  1
