@@ -29,7 +29,7 @@ def throughput(run_dir):
     for r in rows:
         el = r.get("elapsed_seconds") or r.get("elapsed")
         ct = r.get("completion_tokens")
-        if el and ct is not None and not r.get("error"):
+        if el and ct is not None:
             usable.append((ct, el))
     if not usable:
         print("no usable rows", file = sys.stderr)
@@ -58,9 +58,9 @@ def telemetry(run_dir, load_only_w = 100.0):
         header = f.readline().strip().split("\t")
         for line in f:
             parts = line.rstrip("\n").split("\t")
-            if len(parts) != len(header):
+            if len(parts) < 5:
                 continue
-            rows.append(dict(zip(header, parts)))
+            rows.append({k: v for k, v in zip(header, parts) if k})
     if not rows:
         return None
 
@@ -75,8 +75,16 @@ def telemetry(run_dir, load_only_w = 100.0):
         vals = [v for v in vals if v is not None]
         return {"mean": round(statistics.mean(vals), 2), "max": round(max(vals), 2)} if vals else None
 
+    def epoch_s(r):
+        v = num(r, "epoch_s")
+        if v is None:
+            v = num(r, "epoch_ms")
+            if v is not None:
+                v = v / 1000.0
+        return v
     loaded = [r for r in rows if (num(r, "power_w") or 0) >= load_only_w]
-    span = rows[-1].get("epoch_s") - rows[0].get("epoch_s") if len(rows) > 1 else 0
+    e0, e1 = epoch_s(rows[0]), epoch_s(rows[-1])
+    span = (e1 - e0) if (e0 is not None and e1 is not None and len(rows) > 1) else 0
 
     def stat_loaded(key):
         vals = [num(r, key) for r in loaded]
