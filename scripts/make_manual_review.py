@@ -18,6 +18,7 @@ import json
 import os
 
 MANUAL_EVIDENCE_SCHEMA = "r0b0tlab.qwen38.manual_evidence.v1"
+MANUAL_REVIEW_METHOD = "independent_manual_review"  # must match the kit constant
 
 
 def main():
@@ -39,9 +40,19 @@ def main():
         raise SystemExit("no hard_reasoning rows found")
 
     dataset_sha = {r.get("dataset_sha256") for r in hard}
-    identity_sha = {r.get("identity_sha256") for r in hard}
-    dataset_sha256 = dataset_sha.pop() if len(dataset_sha) == 1 else sorted(hard[0].get("dataset_sha256") or [""])[0]
-    run_identity_sha256 = identity_sha.pop() if len(identity_sha) == 1 else (hard[0].get("identity_sha256") or "")
+    dataset_sha256 = dataset_sha.pop() if len(dataset_sha) == 1 else (hard[0].get("dataset_sha256") or "")
+    # The kit validates the evidence against the RUNNER-computed run identity
+    # (_sha256_json(identity), recorded in the runner's summary.json) -- NOT the
+    # row-level identity_sha256 field.
+    run_identity_sha256 = ""
+    for spath in glob.glob(os.path.join(args.run_dir, "*.summary.json")):
+        try:
+            with open(spath) as f:
+                run_identity_sha256 = json.load(f).get("run_identity_sha256") or ""
+        except Exception:
+            pass
+    if not run_identity_sha256:
+        raise SystemExit("run_identity_sha256 not found (need the runner's *.summary.json)")
 
     with open(os.path.join(args.run_dir, "manual-review-input.json"), "w") as f:
         json.dump(hard, f, indent = 2)
@@ -51,8 +62,7 @@ def main():
         "dataset_sha256": dataset_sha256,
         "run_identity_sha256": run_identity_sha256,
         "reviewer": args.reviewer,
-        "method": "Independent item-by-item review of the hard_reasoning rows; "
-                  "content bytes hash-bound (content_sha256); no responses regenerated.",
+        "method": MANUAL_REVIEW_METHOD,
         "rows": [
             {"id": r["id"], "content_sha256": r.get("content_sha256"),
              "passed": None, "rationale": ""}
