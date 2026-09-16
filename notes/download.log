@@ -1,2 +1,5 @@
 hf_transfer: on
 Still waiting to acquire lock on qwen38-flash-next-hf/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds)
+download exit=143
+/usr/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/mp-gay_woh1'}
+  warnings.warn(

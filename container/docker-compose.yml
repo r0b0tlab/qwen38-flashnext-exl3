@@ -1,0 +1,27 @@
+services:
+  flash-next:
+    build:
+      context: .
+    image: qwen38-flash-next-exl3:2.50bpw
+    container_name: qwen38-flash-next-exl3
+    stdin_open: true
+    tty: true
+    environment:
+      MTP: "1"
+      MCS: "320"
+      MCT: "6"
+      CTX: "262144"
+      CQ: "3"
+      # PROMPT: "Explain photosynthesis in one sentence."
+    volumes:
+      - flash-next-models:/models
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+volumes:
+  flash-next-models:
