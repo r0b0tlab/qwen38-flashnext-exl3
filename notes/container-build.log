@@ -841,3 +841,8 @@
 #10 sha256:cbb9175a9bc5f6553f8c0c5025ea9521898b8a3956ee24798dc35c24c6185053 1.32GB / 2.06GB 3605.9s
 #10 sha256:cbb9175a9bc5f6553f8c0c5025ea9521898b8a3956ee24798dc35c24c6185053 1.33GB / 2.06GB 3611.0s
 #10 sha256:cbb9175a9bc5f6553f8c0c5025ea9521898b8a3956ee24798dc35c24c6185053 1.33GB / 2.06GB 3616.1s
+#10 DONE 5610.4s
+
+#11 [base  2/12] RUN apt-get update     && apt-get install -y --no-install-recommends ca-certificates libgomp1     && rm -rf /var/lib/apt/lists/*
+#11 CANCELED
+ERROR: failed to build: failed to solve: Canceled: context canceled

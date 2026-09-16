@@ -21,7 +21,8 @@ Plan: `~/.hermes/plans/2026-09-16_092727-qwen38-flash-next-exl3.md` (v6, single-
 6. **Perf**: `scripts/cpu_probe.py` (calibration), then `scripts/perf_sweep.py --rows A,B,E` → C,D,F; then `-ndt` sweep on winner.
 7. **Evals**: NIAH 2n + 3n at 262080 against the serve; Q200v2 via `scripts/run_q200v2.sh <run-id>`;
    digests via `scripts/digest.py <run_dir>`; manual-evidence review for hard_reasoning.
-8. **Publication** (only after evals pass): fill `<<<MEASURED:...>>>` tokens in `hf-cards/README-flash-next.md`
+8. **Container build** (deferred ~13:55 — Docker Hub pull stalled under download pressure): rerun `bash container/build.sh` once the download finishes; then push to GHCR at publication.
+9. **Publication** (only after evals pass): fill `<<<MEASURED:...>>>` tokens in `hf-cards/README-flash-next.md`
    (grep '<<<' → must be empty), then `scripts/hf_publish.sh models/qwen38-flash-next-exl3-b250 r0b0tlab/Qwen3.8-Flash-Next-EXL3-2.50bpw hf-cards/README-flash-next.md`;
    container build+push via `container/build.sh` + GHCR push; GitHub results repo `r0b0tlab/qwen38-flashnext-exl3`; user flips package public at the end.
 
