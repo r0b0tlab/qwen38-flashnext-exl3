@@ -26,16 +26,16 @@ Plan: `~/.hermes/plans/2026-09-16_092727-qwen38-flash-next-exl3.md` (v6, single-
    (grep '<<<' → must be empty), then `scripts/hf_publish.sh models/qwen38-flash-next-exl3-b250 r0b0tlab/Qwen3.8-Flash-Next-EXL3-2.50bpw hf-cards/README-flash-next.md`;
    container build+push via `container/build.sh` + GHCR push; GitHub results repo `r0b0tlab/qwen38-flashnext-exl3`; user flips package public at the end.
 
-## Status board (updated 2026-09-16 ~12:45 local)
+## Status board (updated 2026-09-16 ~15:30 local)
 
 | phase | state | notes |
 | --- | --- | --- |
 | 0.1 workspace | DONE | commits c9793bd…287e87d |
 | 0.2 budget gates | DONE | disk FITS (468/582), vram mcs ≥ 321 (comfort), ram 34.0 OK; tests 4/4 |
 | shard survey | DONE | 180.0B params BF16; experts 288 tensors/96 files; ngram shards 5-37 |
-| pre-flight checks | DONE | arch registry ✓ (`qwen4_exp.py`); mul1 default codebook (offload-eligible) ✓; `-b` float parser ✓; ngram inline via `-ngb` ✓ (quantized before layers, resumable); `-hq` MoE-aware ✓; source config 262144 / no rope_scaling ✓ |
-| 1.1 download | RUNNING | ~54 GB in; shards finalizing in waves (00001-00010+ done); 16 in flight; 10-20 MB/s bursts |
-| 1.2 convert 2.50 | READY | `scripts/convert.sh` (flags verified) |
+| pre-flight checks | DONE | arch ✓; mul1 default codebook ✓; `-b` float ✓; ngram inline ✓; `-hq` ✓; source config 262144/no-rope ✓; tokenizer kit-kwargs render PASS (47 vs 59 tok) |
+| 1.1 download | DONE | 131/131 shards, 335.3 GiB, 0 incomplete, gap-fill scan clean |
+| 1.2 convert 2.50 | RUNNING | started ~15:20; ngram table K=3 quantizing first, then layers; log `notes/convert.log`; notify armed |
 | 2-6 | scripts READY | serve/acceptance/longctx/niah/probe/sweep/digest/eval-runner/publish/container all written + committed |
 
 ## Environment facts

@@ -1,0 +1,128 @@
+/home/am/.local/lib/python3.14/site-packages/torch/cuda/__init__.py:65: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+ -- Creating new job
+    Input directory: /home/am/exl3-flash-next/models/qwen38-flash-next-hf
+    Output directory: /home/am/exl3-flash-next/models/qwen38-flash-next-exl3-b250
+    Working directory: /home/am/exl3-flash-next/work/target-b250
+    Calibration size: 250 rows, 2048 columns
+    Target bitrate: 2.5 (decoder), 6 (head)
+    Output scales: always
+    Codebook: mul1
+ -- Loaded model config
+    Architecture: Qwen4ExpForConditionalGeneration
+ -- Created model instance:
+     - Qwen4ExpModel
+         - Embedding
+         - ExpandStreams
+         - TransformerBlock
+             - GatedResidual
+             - GatedDeltaNet
+                 - [5x] Linear
+                 - GatedRMSNorm
+             - GatedResidual
+             - BlockSparseMLP
+                 - [1538x] Linear
+                 - GatedMLP
+                     - [3x] Linear
+         - PLELayer
+             - NGramEmbedding
+             - [2x] Linear
+             - [3x] RMSNorm
+         - [2x] TransformerBlock
+             - [11x]
+                 - GatedResidual
+                 - GatedDeltaNet
+                     - [5x] Linear
+                     - GatedRMSNorm
+                 - GatedResidual
+                 - BlockSparseMLP
+                     - [1538x] Linear
+                     - GatedMLP
+                         - [3x] Linear
+             - TransformerBlock
+                 - GatedResidual
+                 - Attention
+                     - QSAIndexer
+                         - Linear
+                         - [2x] RMSNorm
+                     - [4x] Linear
+                     - [2x] RMSNorm
+                 - GatedResidual
+                 - BlockSparseMLP
+                     - [1538x] Linear
+                     - GatedMLP
+                         - [3x] Linear
+             - [3x] TransformerBlock
+             - GatedResidual
+             - GatedDeltaNet
+                 - [5x] Linear
+                 - GatedRMSNorm
+             - GatedResidual
+             - BlockSparseMLP
+                 - [1538x] Linear
+                 - GatedMLP
+                     - [3x] Linear
+         - TransformerBlock
+             - GatedResidual
+             - Attention
+                 - QSAIndexer
+                     - Linear
+                     - [2x] RMSNorm
+                 - [4x] Linear
+                 - [2x] RMSNorm
+             - GatedResidual
+             - BlockSparseMLP
+                 - [1538x] Linear
+                 - GatedMLP
+                     - [3x] Linear
+         - GatedResidual
+         - Linear
+ -- Created MTP model instance:
+     - Qwen4ExpMTPModel
+         - Qwen4ExpMTPInputLayer
+             - RMSNorm
+             - [2x] Linear
+         - TransformerBlock
+             - GatedResidual
+             - Attention
+                 - QSAIndexer
+                     - Linear
+                     - [2x] RMSNorm
+                 - [4x] Linear
+                 - [2x] RMSNorm
+             - GatedResidual
+             - BlockSparseMLP
+                 - [1538x] Linear
+                 - GatedMLP
+                     - [3x] Linear
+         - Qwen4ExpMTPStackOut
+             - GatedResidual
+ -- Created vision model instance (quantizing to 6 bpw):
+     - Qwen3VLVisionModel
+         - Conv
+         - Qwen3VLPosEmbedding
+         - [27x] TransformerBlock
+             - LayerNorm
+             - Attention
+                 - [4x] Linear
+             - LayerNorm
+             - MLP
+                 - [2x] Linear
+         - Qwen3VLVisionPatchMerger
+             - [2x] Linear
+             - LayerNorm
+ -- Loaded tokenizer
+    Vocab size: 248077
+ -- RoPE settings
+    head_dim: 256
+    rope_scaling: {'mrope_interleaved': True, 'mrope_section': [11, 11, 10], 'partial_rotary_factor': 0.25, 'rope_theta': 10000000, 'rope_type': 'default'}
+    rope_theta: 10000000.0
+    rotary_dim: None
+    partial_rotary_factor: 0.25
+    max_position_embeddings: 262144
+    original_max_position_embeddings: None
+    rope_style: NEOX
+    llama_4_scaling_beta: 0.0
+ -- Quantizing n-gram embedding table at K = 3
+ -- source table: 320001536 rows x 160 in 128 shards, quantizing 320001536 rows at K = 3 (cs = heuristic(gamma=3.20, hi=0.98)) on devices [0]
+ -- computing per-head bias (131072 sampled rows/head)
