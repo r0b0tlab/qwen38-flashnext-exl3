@@ -40,7 +40,7 @@ Plan: `~/.hermes/plans/2026-09-16_092727-qwen38-flash-next-exl3.md` (v6, single-
 | 3.x smokes | DONE | MTP acceptance 4.06 (cold 6.8 tok/s); vision PASS (screenshot described, 26.7 tok/s); both smokes ran mcs 320 |
 | 4.x perf search | RUNNING | cpu_probe + sweep rows A,B,E (proc_6f75778e2e34); then C,D,F + ndt + PINNED_ARENA A/B |
 | 5.x evals | DONE | NIAH x2 PASS @262080; Q200v2 173/6/1 (gsm8k 98.75, HR 20/20, HE 100, ifeval 87.18); e2e mean 51.2 tok/s; digests written |
-| 6.x publication | IN FLIGHT | GitHub repo PUSHED (r0b0tlab/qwen38-flashnext-exl3); HF model uploading (61 GB, notify armed); GHCR push running |
+| 6.x publication | IN FLIGHT | GitHub repo PUSHED; HF model uploading (~62% at last check, notify armed); GHCR push was STALLED (0/20 layers) -> killed, relaunch after HF frees the pipe |
 
 ## Environment facts
 
