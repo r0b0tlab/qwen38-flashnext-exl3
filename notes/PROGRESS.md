@@ -26,7 +26,7 @@ Plan: `~/.hermes/plans/2026-09-16_092727-qwen38-flash-next-exl3.md` (v6, single-
    (grep '<<<' → must be empty), then `scripts/hf_publish.sh models/qwen38-flash-next-exl3-b250 r0b0tlab/Qwen3.8-Flash-Next-EXL3-2.50bpw hf-cards/README-flash-next.md`;
    container build+push via `container/build.sh` + GHCR push; GitHub results repo `r0b0tlab/qwen38-flashnext-exl3`; user flips package public at the end.
 
-## Status board (updated 2026-09-16 ~15:30 local)
+## Status board (updated 2026-09-17 ~05:00 local)
 
 | phase | state | notes |
 | --- | --- | --- |
@@ -35,8 +35,12 @@ Plan: `~/.hermes/plans/2026-09-16_092727-qwen38-flash-next-exl3.md` (v6, single-
 | shard survey | DONE | 180.0B params BF16; experts 288 tensors/96 files; ngram shards 5-37 |
 | pre-flight checks | DONE | arch ✓; mul1 default codebook ✓; `-b` float ✓; ngram inline ✓; `-hq` ✓; source config 262144/no-rope ✓; tokenizer kit-kwargs render PASS (47 vs 59 tok) |
 | 1.1 download | DONE | 131/131 shards, 335.3 GiB, 0 incomplete, gap-fill scan clean |
-| 1.2 convert 2.50 | RUNNING | started ~15:20; ngram table K=3 quantizing first, then layers; log `notes/convert.log`; notify armed |
-| 2-6 | scripts READY | serve/acceptance/longctx/niah/probe/sweep/digest/eval-runner/publish/container all written + committed |
+| 1.2 convert 2.50 | DONE | `-- All done`; 6 shards + 19.8 GB ngram table (61 GB total); no-YaRN + mtp/visual asserts PASS; work dir freed |
+| 2.x serve load gate | PARTIAL | mcs 320 loads OK in smokes (vbmi worker, 6 threads); full serve gate next |
+| 3.x smokes | DONE | MTP acceptance 4.06 (cold 6.8 tok/s); vision PASS (screenshot described, 26.7 tok/s); both smokes ran mcs 320 |
+| 4.x perf search | RUNNING | cpu_probe + sweep rows A,B,E (proc_6f75778e2e34); then C,D,F + ndt + PINNED_ARENA A/B |
+| 5.x evals | PENDING | NIAH 2n/3n + Q200v2 after serve gate |
+| 6.x publication | PENDING | repos after evals; placeholders in card/README/metrics to fill |
 
 ## Environment facts
 
