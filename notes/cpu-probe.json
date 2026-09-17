@@ -1,0 +1,33 @@
+{
+  "moe_cpu_split": 512,
+  "moe_cpu_threads": 6,
+  "mean_tok_per_s": 29.72,
+  "implied_cold_bw_gb_s": 21.92,
+  "rows": [
+    {
+      "prompt": "Explain in detail how a refrigerator wor",
+      "new_tokens": 128,
+      "tok_per_s": 26.357179207796452
+    },
+    {
+      "prompt": "What is 17*23? Show the multiplication s",
+      "new_tokens": 128,
+      "tok_per_s": 30.997573871064816
+    },
+    {
+      "prompt": "Write a short story about a lighthouse k",
+      "new_tokens": 128,
+      "tok_per_s": 29.196965548161263
+    },
+    {
+      "prompt": "Summarize the main causes of the French ",
+      "new_tokens": 128,
+      "tok_per_s": 29.213693448660667
+    },
+    {
+      "prompt": "Write a Python function that reverses a ",
+      "new_tokens": 128,
+      "tok_per_s": 32.85522959179771
+    }
+  ]
+}

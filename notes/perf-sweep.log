@@ -1,0 +1,335 @@
+=== row A: {'mcs': 295, 'mct': 6, 'mtp': True, 'cq': 3} ===
+ -- CPU split experts (worker, dynamic): model.language_model.layers.0.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.1.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.2.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.3.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.4.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.5.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.6.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.7.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.8.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.9.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.10.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.11.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.12.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.13.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.14.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.15.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.16.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.17.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.18.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.19.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.20.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.21.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.22.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.23.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.24.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.25.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.26.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.27.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.28.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.29.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.30.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.31.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.32.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.33.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.34.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.35.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.36.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.37.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.38.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.39.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.40.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.41.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.42.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.43.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.44.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.45.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.46.mlp [217..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.47.mlp [217..512) of 512
+ -- CPU MoE worker started: 48 layers, avx512-vbmi, 6 threads
+ -- CPU split experts (worker, dynamic): mtp.layers.0.mlp [217..512) of 512
+ -- CPU MoE worker started: 1 layers, avx512-vbmi, 6 threads
+[sweep] 'What is 17*23? Show the multip' -> 128 tok, 28.46 tok/s
+[sweep] 'Explain in detail how a refrig' -> 1 tok, 1.34 tok/s
+[sweep] 'Write a short story about a li' -> 128 tok, 29.99 tok/s
+[sweep] 'Summarize the main causes of t' -> 128 tok, 24.47 tok/s
+[sweep] 'Write a Python function that r' -> 128 tok, 44.32 tok/s
+PERF_ROW_JSON:{"row": "A", "config": {"mcs": 295, "mct": 6, "mtp": true, "cq": 3, "ndt": null}, "load_s": 29.1, "ttft_256tok_s": 5.314, "mean_tok_per_s": 25.72, "vram_used_gb": 24.29, "results": [{"prompt": "What is 17*23? Show the multiplication s", "new_tokens": 128, "seconds": 4.5, "tok_per_s": 28.46}, {"prompt": "Explain in detail how a refrigerator wor", "new_tokens": 1, "seconds": 0.75, "tok_per_s": 1.34}, {"prompt": "Write a short story about a lighthouse k", "new_tokens": 128, "seconds": 4.27, "tok_per_s": 29.99}, {"prompt": "Summarize the main causes of the French ", "new_tokens": 128, "seconds": 5.23, "tok_per_s": 24.47}, {"prompt": "Write a Python function that reverses a ", "new_tokens": 128, "seconds": 2.89, "tok_per_s": 44.32}]}
+/home/am/.local/lib/python3.14/site-packages/torch/cuda/__init__.py:65: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/am/.local/lib/python3.14/site-packages/torch/cuda/__init__.py:65: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/am/.local/lib/python3.14/site-packages/torch/cuda/__init__.py:65: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+=== row A done in 64.2s: 25.72 tok/s ===
+=== row B: {'mcs': 320, 'mct': 6, 'mtp': True, 'cq': 3} ===
+ -- CPU split experts (worker, dynamic): model.language_model.layers.0.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.1.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.2.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.3.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.4.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.5.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.6.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.7.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.8.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.9.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.10.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.11.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.12.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.13.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.14.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.15.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.16.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.17.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.18.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.19.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.20.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.21.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.22.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.23.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.24.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.25.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.26.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.27.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.28.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.29.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.30.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.31.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.32.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.33.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.34.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.35.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.36.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.37.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.38.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.39.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.40.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.41.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.42.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.43.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.44.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.45.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.46.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.47.mlp [192..512) of 512
+ -- CPU MoE worker started: 48 layers, avx512-vbmi, 6 threads
+ -- CPU split experts (worker, dynamic): mtp.layers.0.mlp [192..512) of 512
+ -- CPU MoE worker started: 1 layers, avx512-vbmi, 6 threads
+[sweep] 'What is 17*23? Show the multip' -> 128 tok, 46.26 tok/s
+[sweep] 'Explain in detail how a refrig' -> 128 tok, 32.8 tok/s
+[sweep] 'Write a short story about a li' -> 128 tok, 30.21 tok/s
+[sweep] 'Summarize the main causes of t' -> 128 tok, 42.21 tok/s
+[sweep] 'Write a Python function that r' -> 128 tok, 41.6 tok/s
+PERF_ROW_JSON:{"row": "B", "config": {"mcs": 320, "mct": 6, "mtp": true, "cq": 3, "ndt": null}, "load_s": 34.5, "ttft_256tok_s": 1.886, "mean_tok_per_s": 38.62, "vram_used_gb": 22.4, "results": [{"prompt": "What is 17*23? Show the multiplication s", "new_tokens": 128, "seconds": 2.77, "tok_per_s": 46.26}, {"prompt": "Explain in detail how a refrigerator wor", "new_tokens": 128, "seconds": 3.9, "tok_per_s": 32.8}, {"prompt": "Write a short story about a lighthouse k", "new_tokens": 128, "seconds": 4.24, "tok_per_s": 30.21}, {"prompt": "Summarize the main causes of the French ", "new_tokens": 128, "seconds": 3.03, "tok_per_s": 42.21}, {"prompt": "Write a Python function that reverses a ", "new_tokens": 128, "seconds": 3.08, "tok_per_s": 41.6}]}
+/home/am/.local/lib/python3.14/site-packages/torch/cuda/__init__.py:65: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/am/.local/lib/python3.14/site-packages/torch/cuda/__init__.py:65: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/am/.local/lib/python3.14/site-packages/torch/cuda/__init__.py:65: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+=== row B done in 64.0s: 38.62 tok/s ===
+=== row E: {'mcs': 320, 'mct': 6, 'mtp': False, 'cq': 3} ===
+ -- CPU split experts (worker, dynamic): model.language_model.layers.0.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.1.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.2.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.3.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.4.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.5.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.6.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.7.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.8.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.9.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.10.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.11.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.12.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.13.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.14.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.15.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.16.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.17.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.18.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.19.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.20.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.21.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.22.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.23.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.24.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.25.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.26.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.27.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.28.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.29.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.30.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.31.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.32.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.33.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.34.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.35.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.36.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.37.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.38.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.39.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.40.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.41.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.42.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.43.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.44.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.45.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.46.mlp [192..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.47.mlp [192..512) of 512
+ -- CPU MoE worker started: 48 layers, avx512-vbmi, 6 threads
+[sweep] 'What is 17*23? Show the multip' -> 128 tok, 27.7 tok/s
+[sweep] 'Explain in detail how a refrig' -> 128 tok, 35.62 tok/s
+[sweep] 'Write a short story about a li' -> 128 tok, 35.3 tok/s
+[sweep] 'Summarize the main causes of t' -> 128 tok, 11.05 tok/s
+[sweep] 'Write a Python function that r' -> 128 tok, 29.06 tok/s
+PERF_ROW_JSON:{"row": "E", "config": {"mcs": 320, "mct": 6, "mtp": false, "cq": 3, "ndt": null}, "load_s": 38.8, "ttft_256tok_s": 2.369, "mean_tok_per_s": 27.75, "vram_used_gb": 21.27, "results": [{"prompt": "What is 17*23? Show the multiplication s", "new_tokens": 128, "seconds": 4.62, "tok_per_s": 27.7}, {"prompt": "Explain in detail how a refrigerator wor", "new_tokens": 128, "seconds": 3.59, "tok_per_s": 35.62}, {"prompt": "Write a short story about a lighthouse k", "new_tokens": 128, "seconds": 3.63, "tok_per_s": 35.3}, {"prompt": "Summarize the main causes of the French ", "new_tokens": 128, "seconds": 11.59, "tok_per_s": 11.05}, {"prompt": "Write a Python function that reverses a ", "new_tokens": 128, "seconds": 4.4, "tok_per_s": 29.06}]}
+/home/am/.local/lib/python3.14/site-packages/torch/cuda/__init__.py:65: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+/home/am/.local/lib/python3.14/site-packages/torch/cuda/__init__.py:65: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+=== row E done in 74.9s: 27.75 tok/s ===
+[
+  {
+    "row": "A",
+    "config": {
+      "mcs": 295,
+      "mct": 6,
+      "mtp": true,
+      "cq": 3,
+      "ndt": null
+    },
+    "load_s": 29.1,
+    "ttft_256tok_s": 5.314,
+    "mean_tok_per_s": 25.72,
+    "vram_used_gb": 24.29,
+    "results": [
+      {
+        "prompt": "What is 17*23? Show the multiplication s",
+        "new_tokens": 128,
+        "seconds": 4.5,
+        "tok_per_s": 28.46
+      },
+      {
+        "prompt": "Explain in detail how a refrigerator wor",
+        "new_tokens": 1,
+        "seconds": 0.75,
+        "tok_per_s": 1.34
+      },
+      {
+        "prompt": "Write a short story about a lighthouse k",
+        "new_tokens": 128,
+        "seconds": 4.27,
+        "tok_per_s": 29.99
+      },
+      {
+        "prompt": "Summarize the main causes of the French ",
+        "new_tokens": 128,
+        "seconds": 5.23,
+        "tok_per_s": 24.47
+      },
+      {
+        "prompt": "Write a Python function that reverses a ",
+        "new_tokens": 128,
+        "seconds": 2.89,
+        "tok_per_s": 44.32
+      }
+    ],
+    "wall_s": 64.2
+  },
+  {
+    "row": "B",
+    "config": {
+      "mcs": 320,
+      "mct": 6,
+      "mtp": true,
+      "cq": 3,
+      "ndt": null
+    },
+    "load_s": 34.5,
+    "ttft_256tok_s": 1.886,
+    "mean_tok_per_s": 38.62,
+    "vram_used_gb": 22.4,
+    "results": [
+      {
+        "prompt": "What is 17*23? Show the multiplication s",
+        "new_tokens": 128,
+        "seconds": 2.77,
+        "tok_per_s": 46.26
+      },
+      {
+        "prompt": "Explain in detail how a refrigerator wor",
+        "new_tokens": 128,
+        "seconds": 3.9,
+        "tok_per_s": 32.8
+      },
+      {
+        "prompt": "Write a short story about a lighthouse k",
+        "new_tokens": 128,
+        "seconds": 4.24,
+        "tok_per_s": 30.21
+      },
+      {
+        "prompt": "Summarize the main causes of the French ",
+        "new_tokens": 128,
+        "seconds": 3.03,
+        "tok_per_s": 42.21
+      },
+      {
+        "prompt": "Write a Python function that reverses a ",
+        "new_tokens": 128,
+        "seconds": 3.08,
+        "tok_per_s": 41.6
+      }
+    ],
+    "wall_s": 64.0
+  },
+  {
+    "row": "E",
+    "config": {
+      "mcs": 320,
+      "mct": 6,
+      "mtp": false,
+      "cq": 3,
+      "ndt": null
+    },
+    "load_s": 38.8,
+    "ttft_256tok_s": 2.369,
+    "mean_tok_per_s": 27.75,
+    "vram_used_gb": 21.27,
+    "results": [
+      {
+        "prompt": "What is 17*23? Show the multiplication s",
+        "new_tokens": 128,
+        "seconds": 4.62,
+        "tok_per_s": 27.7
+      },
+      {
+        "prompt": "Explain in detail how a refrigerator wor",
+        "new_tokens": 128,
+        "seconds": 3.59,
+        "tok_per_s": 35.62
+      },
+      {
+        "prompt": "Write a short story about a lighthouse k",
+        "new_tokens": 128,
+        "seconds": 3.63,
+        "tok_per_s": 35.3
+      },
+      {
+        "prompt": "Summarize the main causes of the French ",
+        "new_tokens": 128,
+        "seconds": 11.59,
+        "tok_per_s": 11.05
+      },
+      {
+        "prompt": "Write a Python function that reverses a ",
+        "new_tokens": 128,
+        "seconds": 4.4,
+        "tok_per_s": 29.06
+      }
+    ],
+    "wall_s": 74.9
+  }
+]
+sweep-exit=0
