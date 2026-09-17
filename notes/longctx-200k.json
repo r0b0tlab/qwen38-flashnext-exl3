@@ -1,0 +1,10 @@
+{
+  "prompt_tokens": 174870,
+  "new_tokens": 200,
+  "prefill_seconds": 263.3,
+  "prefill_tok_per_s": 664.2,
+  "decode_seconds": 9.55,
+  "decode_tok_per_s": 20.94,
+  "acceptance_length": 1.835,
+  "vram_used_gb": 20.7
+}
