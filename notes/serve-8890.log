@@ -67,3 +67,5 @@ You are using a model of type `qwen4_exp` to instantiate a model of type ``. Thi
 [http] 127.0.0.1 "POST /v1/completions HTTP/1.1" 200 -
 [http] 127.0.0.1 "POST /v1/chat/completions/render HTTP/1.1" 200 -
 [http] 127.0.0.1 "POST /v1/completions HTTP/1.1" 200 -
+/usr/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 2 leaked shared_memory objects to clean up at shutdown: {'/psm_11371fae', '/psm_743f6ed5'}
+  warnings.warn(

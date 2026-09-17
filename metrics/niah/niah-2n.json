@@ -1,0 +1,23 @@
+{
+  "variant": "2n",
+  "fractions": [
+    0.33,
+    0.66
+  ],
+  "codes": [
+    "R0B0-ZEBRA-7731",
+    "R0B0-LYNX-4402"
+  ],
+  "target_tokens": 262080,
+  "prompt_tokens": 262080,
+  "completion_tokens": 134,
+  "elapsed_s": 237.5,
+  "finish_reason": "stop",
+  "last_code": "R0B0-LYNX-4402",
+  "passed": true,
+  "all_codes_found": [
+    "R0B0-ZEBRA-7731",
+    "R0B0-LYNX-4402"
+  ],
+  "response_text": "The user is asking me to identify the LAST secret verification code from the archival record. Let me look through the text to find the secret verification codes.\n\nI can see two secret verification codes in the text:\n1. \"IMPORTANT SECRET VERIFICATION CODE: R0B0-ZEBRA-7731\" - appears first\n2. \"IMPORTANT SECRET VERIFICATION CODE: R0B0-LYNX-4402\" - appears second (later in the text)\n\nThe last one is R"
+}

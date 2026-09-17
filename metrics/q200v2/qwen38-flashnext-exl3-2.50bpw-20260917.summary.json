@@ -1,0 +1,100 @@
+{
+  "base_url": "http://127.0.0.1:8890",
+  "candidate_id": "qwen38-flash-next-exl3-2.50bpw",
+  "chat_template_kwargs": {
+    "enable_thinking": true,
+    "reasoning_effort": "low",
+    "thinking": true
+  },
+  "completeness_errors": [
+    "transport failure: ifeval-023",
+    "missing/invalid finish_reason: ifeval-023"
+  ],
+  "correct_count": 173,
+  "dataset_count": 180,
+  "dataset_sha256": "66a75701cbeea69f212e1c8be92aab9efaf3fa4d7af3c6911c8f7864a17d8d14",
+  "families": {
+    "gsm8k": {
+      "accuracy_pct": 98.75,
+      "correct": 79,
+      "grade_complete": 80,
+      "grader_errors": 0,
+      "incorrect": 1,
+      "n": 80,
+      "transported": 80,
+      "ungraded": 0
+    },
+    "hard_reasoning": {
+      "accuracy_pct": 100.0,
+      "correct": 20,
+      "grade_complete": 20,
+      "grader_errors": 0,
+      "incorrect": 0,
+      "n": 20,
+      "transported": 20,
+      "ungraded": 0
+    },
+    "humaneval": {
+      "accuracy_pct": 100.0,
+      "correct": 40,
+      "grade_complete": 40,
+      "grader_errors": 0,
+      "incorrect": 0,
+      "n": 40,
+      "transported": 40,
+      "ungraded": 0
+    },
+    "ifeval": {
+      "accuracy_pct": 87.18,
+      "correct": 34,
+      "grade_complete": 39,
+      "grader_errors": 0,
+      "incorrect": 5,
+      "n": 40,
+      "transported": 39,
+      "ungraded": 1
+    }
+  },
+  "grade_complete": false,
+  "grader_error_count": 0,
+  "image_id": "sha256:caf1a95b886e50be2218621a79057ce68897f55497721c1344b3c061bbca1a8e",
+  "incorrect_count": 6,
+  "manual_evidence": {
+    "method": "independent_manual_review",
+    "path": "/home/am/r0b0bench-q200v2/runs/qwen38-flashnext-exl3-2.50bpw-20260917/manual-evidence.json",
+    "reviewer": "hermes-agent",
+    "row_count": 20,
+    "run_identity_sha256": "4ff9776c4a4e702e9c046547bc64fcaed8b3f8b14f87d1dbecb5692d658682b2",
+    "sha256": "6e69b200e7554f6bf6ce6c7b9dfdf5ad74d1639c40f0f514be2bac8cfba401db"
+  },
+  "model": "qwen38-flash-next-exl3",
+  "not_admitted_count": 0,
+  "not_admitted_event": null,
+  "not_admitted_ids": [],
+  "profile_id": "local-rtx3090-flashnext-2.50bpw",
+  "quality_policy": {
+    "applied": false,
+    "name": "external_baseline_comparator_required",
+    "passed": null
+  },
+  "response_budget": {
+    "all_rows_stopped": false,
+    "ceiling_contact_ids": [
+      "ifeval-023"
+    ],
+    "configured_max_tokens": 8192,
+    "finish_reason_counts": {
+      "length": 1,
+      "stop": 179
+    },
+    "max_observed_completion_tokens": 8192
+  },
+  "rows": 180,
+  "run_id": "qwen38-flashnext-exl3-2.50bpw-20260917",
+  "run_identity_sha256": "4ff9776c4a4e702e9c046547bc64fcaed8b3f8b14f87d1dbecb5692d658682b2",
+  "schema": "r0b0tlab.qwen38.quality_text_180_run.v2",
+  "status": "INCOMPLETE",
+  "transport_complete": false,
+  "transport_count": 179,
+  "ungraded_count": 1
+}

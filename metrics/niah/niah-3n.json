@@ -1,0 +1,26 @@
+{
+  "variant": "3n",
+  "fractions": [
+    0.33,
+    0.66,
+    0.9
+  ],
+  "codes": [
+    "R0B0-ZEBRA-7731",
+    "R0B0-LYNX-4402",
+    "R0B0-RAVEN-9158"
+  ],
+  "target_tokens": 262080,
+  "prompt_tokens": 262080,
+  "completion_tokens": 111,
+  "elapsed_s": 33.0,
+  "finish_reason": "stop",
+  "last_code": "R0B0-RAVEN-9158",
+  "passed": true,
+  "all_codes_found": [
+    "R0B0-ZEBRA-7731",
+    "R0B0-LYNX-4402",
+    "R0B0-RAVEN-9158"
+  ],
+  "response_text": "The user is asking me to identify the LAST secret verification code from the archival record. Let me look through the text to find all the secret verification codes mentioned:\n\n1. R0B0-ZEBRA-7731\n2. R0B0-LYNX-4402\n3. R0B0-RAVEN-9158\n\nThe last one is R0B0-RAVEN-9158.\n</think>\n\nR0B0-RAVEN-9158"
+}

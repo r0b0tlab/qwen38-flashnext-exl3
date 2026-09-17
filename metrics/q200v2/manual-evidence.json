@@ -1,0 +1,129 @@
+{
+  "schema": "r0b0tlab.qwen38.manual_evidence.v1",
+  "dataset_sha256": "66a75701cbeea69f212e1c8be92aab9efaf3fa4d7af3c6911c8f7864a17d8d14",
+  "run_identity_sha256": "4ff9776c4a4e702e9c046547bc64fcaed8b3f8b14f87d1dbecb5692d658682b2",
+  "reviewer": "hermes-agent",
+  "method": "independent_manual_review",
+  "rows": [
+    {
+      "id": "hard-00",
+      "content_sha256": "8ef529ce6d19794a26a9719201a2f459072a8a186822b076de06f5e1f9915c34",
+      "passed": true,
+      "rationale": "Full proof: n(n-1)(n+1) divisible by 2 and 3; p>3 generalization correct (consecutive evens give 8 | (p-1)(p+1), 3 divides one of p\u00b11); p=7 verified 336=24*14."
+    },
+    {
+      "id": "hard-01",
+      "content_sha256": "26fe043d9cad8c7b03a9bd4c35bba185ff80b473e5a093041ad93cc39bbeb554",
+      "passed": true,
+      "rationale": "Exact 13/4 via first-green position distribution (sum 1430/440) cross-checked with the order-statistic formula (n+1)/(k+1)."
+    },
+    {
+      "id": "hard-02",
+      "content_sha256": "8fb264a04535d6ebc57b4642d287ef0ad9634f6ef12d6f798ef788e4dd0059b9",
+      "passed": true,
+      "rationale": "All four pairs (53,52),(19,16),(13,8),(11,4) from odd factor pairs of 105, each verified."
+    },
+    {
+      "id": "hard-03",
+      "content_sha256": "45954493859bf683335423409196de0d6cf6806a5a315a75cde7f4044784734e",
+      "passed": true,
+      "rationale": "Exactly five sentences; valid contradiction proof via evenness of a and b."
+    },
+    {
+      "id": "hard-04",
+      "content_sha256": "90a1f5ef0ba7f820bcffc88c7dae4aa4897e9435601d2714828d66e4e6f02eac",
+      "passed": true,
+      "rationale": "det = 1/6,048,000 via the Hilbert closed form with correct numerator (2^8*3^4) and denominator factorization."
+    },
+    {
+      "id": "hard-05",
+      "content_sha256": "a543bb8248c6e0667dd9023c4c19702feb02ea75956f7d313cb020982e02de60",
+      "passed": true,
+      "rationale": "Recurrence V(n)=V(n-1)-4 with V(0)=100; empties after exactly 25 hours."
+    },
+    {
+      "id": "hard-06",
+      "content_sha256": "708f5fb0149dca303c85b207975959cc90ef4f7590c04314cca8f1fe30e112d3",
+      "passed": true,
+      "rationale": "Correct worst-case \u0398 for all five algorithms with valid one-clause justifications."
+    },
+    {
+      "id": "hard-07",
+      "content_sha256": "0d1e79a91c2bd3062af192161d47d73ece0a3871ed81420b162e51d6b650ba54",
+      "passed": true,
+      "rationale": "3/10, confirmed via Bayes (C(9,2)/C(10,3) = 36/120)."
+    },
+    {
+      "id": "hard-08",
+      "content_sha256": "0997d133494236188d471c0638b4233cf2598f90da2008b204087293f4652843",
+      "passed": true,
+      "rationale": "Frobenius 6*7-6-7 = 29 with explicit non-representability check and 30-35 plus +6 closure argument."
+    },
+    {
+      "id": "hard-09",
+      "content_sha256": "1b50284388f9e2c61f0cea5ce740a3db068e26b3a4a2faa52314171d9871f9e6",
+      "passed": true,
+      "rationale": "Minimal 3-state DFA, correct 2r+b mod 3 transitions, pairwise distinguishability proof, trace verified."
+    },
+    {
+      "id": "hard-10",
+      "content_sha256": "dbbb846d6c074f122bac24f5f2b0c7d7a6b353ada42cb3e948781af8b5d4ebbf",
+      "passed": true,
+      "rationale": "Gamma(3) = 2, cross-checked by parts."
+    },
+    {
+      "id": "hard-11",
+      "content_sha256": "ea0a36531f06e97907e43425b954fe76d59404309f595d97a8b0b7ef1edc7d2f",
+      "passed": true,
+      "rationale": "f'(1) = 1 via logarithmic differentiation with correct (x^x)' term."
+    },
+    {
+      "id": "hard-12",
+      "content_sha256": "205af45f294b0382f2eeeca0da1093e73244cc8b72643b988f4a85c3476bb65d",
+      "passed": true,
+      "rationale": "Finite proof by maximal path plus the infinite bi-infinite-path counterexample; matches the corrected reference."
+    },
+    {
+      "id": "hard-13",
+      "content_sha256": "12f738c0600cec5556ddfc51c6e8cfd5b0b28b35a95d76bb66926634fa13fa7e",
+      "passed": true,
+      "rationale": "2/3 via closing rate 1 + cos 60 = 3/2 against the unit initial distance."
+    },
+    {
+      "id": "hard-14",
+      "content_sha256": "b3cd6997d567a7555669d17e7f329e26da887dde4dbfac031dada71fa5065401",
+      "passed": true,
+      "rationale": "256 = 2^(2^3) with a valid complementary-pair counting argument."
+    },
+    {
+      "id": "hard-15",
+      "content_sha256": "cdcdd8882f019dc59a59ce5980595aad734b56963293b0c1b4c1eb9725b535e3",
+      "passed": true,
+      "rationale": "0 via the binomial theorem at x=-1 (n=17 > 0)."
+    },
+    {
+      "id": "hard-16",
+      "content_sha256": "8526cad147c260a809e3da001c300bc02635fca1edf1e7be57fae96bf19f2cbc",
+      "passed": true,
+      "rationale": "1/(2pi) via 2pi*h = 1; notes independence of R."
+    },
+    {
+      "id": "hard-17",
+      "content_sha256": "db87cdfda571d81ad4d10af6feb5b943cc9e94f9c316ee4692933146ff69f3fc",
+      "passed": true,
+      "rationale": "Identifies the look-and-say RLE recurrence and the absence of an elementary closed form; cites Conway lambda ~ 1.3036."
+    },
+    {
+      "id": "hard-18",
+      "content_sha256": "83580c13ae41c0b952df92d7a719d8a222c55c3e00e30ed6b874515e3f660ff7",
+      "passed": true,
+      "rationale": "Pigeonhole over four half-by-half subsquares (diameter sqrt(2)/2) with a tightness example."
+    },
+    {
+      "id": "hard-19",
+      "content_sha256": "ee928e441c3b0c51331586620dc7db97eef02241ecac6cbc249fffd51df3c774",
+      "passed": true,
+      "rationale": "1/3 from 2 of 6 ordered sum-7 outcomes."
+    }
+  ]
+}

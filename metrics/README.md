@@ -1,7 +1,6 @@
 # Metrics — Qwen3.8-Flash-Next EXL3 2.50 bpw (RTX 3090 campaign)
 
-<!-- PUBLISH CHECKLIST: fill <<<...>>> tokens at publication; keep raw traces in the local
-     run dirs (~/r0b0bench-q200v2/runs/), per r0b0bench rules. -->
+
 
 | file | what |
 | --- | --- |
@@ -14,11 +13,11 @@
 
 Method notes (fill at publication):
 
-- Q200v2 identity: dataset sha256 `<<<MEASURED:dataset_sha256>>>`, run identity
-  `<<<MEASURED:run_identity_sha256>>>`; chat kwargs
+- Q200v2 identity: dataset sha256 `66a75701cbeea69f212e1c8be92aab9efaf3fa4d7af3c6911c8f7864a17d8d14`, run identity
+  `4ff9776c4a4e702e9c046547bc64fcaed8b3f8b14f87d1dbecb5692d658682b2`; chat kwargs
   `{enable_thinking, thinking, reasoning_effort=low}`; max_tokens 8192; 1 worker;
   admission: single in-flight, serialized serve.
 - Serve config: `-mcs 320 -mct 6`, MTP on, cq3 cache, 262,144-token native context
   (no rope scaling), OpenAI-compatible endpoint via `scripts/serve_openai.py`.
-- NIAH deviations disclosed (if any): `<<<MEASURED:niah_deviations>>>`.
-- Transport failures / ceiling rows disclosed: `<<<MEASURED:transport_notes>>>`.
+- NIAH deviations disclosed (if any): `3n shares a ~173k-token prefix with 2n (its shorter wall time reflects cross-request prefix reuse, not raw prefill speed); generation reserve 256; client on the serve host; one request per variant.`.
+- Transport failures / ceiling rows disclosed: `ifeval-023 hit the 8,192-token ceiling (finish_reason unsupported) - disclosed transport failure, fail-closed. Transport 179/180.`.

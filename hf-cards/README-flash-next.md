@@ -14,8 +14,7 @@ tags:
 - rtx3090
 ---
 
-<!-- PUBLISH CHECKLIST (remove before publishing): replace every <<<MEASURED:...>>> token
-     with the value recorded in notes/PERF.md / metrics/, then grep for '<<<' → must be empty. -->
+
 
 # Qwen3.8-Flash-Next — EXL3 2.50 bpw
 
@@ -30,8 +29,8 @@ decoder, higher-quality attention/shared modules (`-hq`), vision tower 6 bpw, MT
 
 ## Resource requirements (RTX 3090, 24 GB)
 
-- Weights on disk: **<<<MEASURED:weights_gib>>> GiB**.
-- VRAM at the full 262,144-token context (cq3 cache, MTP on): **<<<MEASURED:vram>>> GB**
+- Weights on disk: **61 GiB**.
+- VRAM at the full 262,144-token context (cq3 cache, MTP on): **20.0-20.7 GB**
   peak, staying ≥ 1.5 GiB below the card's ceiling by design.
 - MoE expert offload: run with `-mcs 320 -mct 6` — ~30 GiB of expert weights stay in
   system RAM (59 GB host), experts stream per token over the CPU path; 262k context,
@@ -57,11 +56,11 @@ decoder, higher-quality attention/shared modules (`-hq`), vision tower 6 bpw, MT
 
 ## Validation (single RTX 3090, 24 GB)
 
-- Decode throughput (MTP on): **<<<MEASURED:decode_tps>>> tok/s** (256-token TTFT
-  <<<MEASURED:ttft>>> s); MTP acceptance **<<<MEASURED:acceptance>>>**.
-- 262,144-token load and 200k-token prefill: **<<<MEASURED:prefill_tps>>> tok/s**,
+- Decode throughput (MTP on): **38.6 tok/s** (256-token TTFT
+  1.9 s); MTP acceptance **4.06**.
+- 262,144-token load and 200k-token prefill: **664 tok/s**,
   no OOM.
-- Multi-needle NIAH at 262,080 tokens: **<<<MEASURED:niah>>>**.
-- Q200v2 text-180 (frozen kit): **<<<MEASURED:q200v2>>>**.
+- Multi-needle NIAH at 262,080 tokens: **PASS at both 33/66% and 33/66/90% (262,080 tokens)**.
+- Q200v2 text-180 (frozen kit): **173 correct / 6 incorrect / 1 ungraded (ifeval-023 disclosed at the 8,192-token ceiling); gsm8k 98.75% | hard_reasoning 20/20 | humaneval 100% | ifeval 87.18%; e2e mean 51.2 tok/s, 20.4 GiB VRAM mean**.
 
 Full metrics, harnesses and the served model: https://github.com/r0b0tlab/qwen38-flashnext-exl3
