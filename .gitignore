@@ -2,3 +2,4 @@ models/
 work/
 __pycache__/
 *.pyc
+container/.buildctx/
