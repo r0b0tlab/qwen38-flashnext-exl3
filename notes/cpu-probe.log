@@ -1,0 +1,14 @@
+/home/am/.local/lib/python3.14/site-packages/torch/cuda/__init__.py:65: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+ !! --moe_cpu_split 512 exceeds the 512 routed experts per layer, capped to 511 (use --moe_cpu_offload to move whole layers)
+ -- CPU split experts (worker, dynamic): model.language_model.layers.0.mlp [1..512) of 512
+/home/am/.local/lib/python3.14/site-packages/torch/cuda/__init__.py:65: FutureWarning: The pynvml package is deprecated. Please install nvidia-ml-py instead. If you did not install pynvml directly, please report this to the maintainers of the package that installed pynvml for you.
+  import pynvml  # type: ignore[import]
+ -- CPU split experts (worker, dynamic): model.language_model.layers.1.mlp [1..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.2.mlp [1..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.3.mlp [1..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.4.mlp [1..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.5.mlp [1..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.6.mlp [1..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.7.mlp [1..512) of 512
+ -- CPU split experts (worker, dynamic): model.language_model.layers.8.mlp [1..512) of 512
