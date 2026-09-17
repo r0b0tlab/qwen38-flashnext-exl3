@@ -4,3 +4,12 @@ repo_id=r0b0tlab/Qwen3.8-Flash-Next-EXL3-2.50bpw url=https://huggingface.co/r0b0
 == upload weights/configs ==
 Start hashing 21 files.
 Finished hashing 21 files.
+url=https://huggingface.co/r0b0tlab/Qwen3.8-Flash-Next-EXL3-2.50bpw/commit/26ff20c2eb97e33790907b8451902a3f3723aeb0
+== upload card ==
+url=https://huggingface.co/r0b0tlab/Qwen3.8-Flash-Next-EXL3-2.50bpw/commit/1ac94c90c52eee509c44fdd4e9b19322775fe13a
+== verify ==
+files: 21
+has ngram_embedding: True
+base_model: Qwen/Qwen3.8-Flash-Next | relation: quantized
+VERIFIED
+hf-publish exit=0
