@@ -1,0 +1,7 @@
+{
+  "target": "models/qwen38-flash-next-exl3-b250",
+  "img": "/home/am/Pictures/Screenshots/Screenshot From 2026-04-29 16-04-37.png",
+  "caption": "",
+  "elapsed_s": 6.3,
+  "moe_cpu_split": 320
+}

@@ -73,10 +73,21 @@ def main():
     )
     generator.enqueue(job)
     captured = ""
+    streamed = []
+    final = None
     while generator.num_remaining_jobs():
         for r in generator.iterate():
+            t = r.get("text")
+            if t:
+                streamed.append(t)
+                print(t, end = "", flush = True)
             if r.get("eos"):
-                captured = r.get("text") or captured
+                final = r
+    if final:
+        captured = final.get("text") or final.get("full_completion") or "".join(streamed)
+    else:
+        captured = "".join(streamed)
+    new_tokens = int((final or {}).get("new_tokens") or 0)
     dt = time.time() - t0
 
     out = {
@@ -84,6 +95,7 @@ def main():
         "img": args.img,
         "caption": captured.strip()[:600],
         "elapsed_s": round(dt, 1),
+        "new_tokens": new_tokens,
         "moe_cpu_split": args.moe_cpu_split,
     }
     print(json.dumps(out, indent = 2))
