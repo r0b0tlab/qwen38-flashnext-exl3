@@ -1,0 +1,5 @@
+== create repo ==
+Warning: `hf repo` is deprecated in favor of `hf repos`.
+repo_id=r0b0tlab/Qwen3.8-Flash-Next-EXL3-2.50bpw url=https://huggingface.co/r0b0tlab/Qwen3.8-Flash-Next-EXL3-2.50bpw
+== upload weights/configs ==
+Start hashing 21 files.

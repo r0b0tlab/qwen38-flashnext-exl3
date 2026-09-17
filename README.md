@@ -67,7 +67,7 @@ Budget math behind those numbers:
 
 ```bash
 # Engine (v1.5.0-compatible build with MoE CPU-offload support):
-git clone https://github.com/r0b0tlab/exllamav3 exllamav3
+git clone -b dflash2-pathway https://github.com/r0b0tlab/exllamav3 exllamav3  # validated checkout
 
 # Convert (single pass; ~hours; requires the 335 GiB BF16 source):
 cd exllamav3 && python convert.py \
