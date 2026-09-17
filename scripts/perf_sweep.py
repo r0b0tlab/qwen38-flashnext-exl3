@@ -34,6 +34,9 @@ ROWS = {
     "D": {"mcs": 360, "mct": 6,  "mtp": True,  "cq": 3},
     "E": {"mcs": 320, "mct": 6,  "mtp": False, "cq": 3},
     "F": {"mcs": 320, "mct": 6,  "mtp": True,  "cq": 4},
+    "G": {"mcs": 320, "mct": 6,  "mtp": True,  "cq": 3, "ndt": 2},
+    "H": {"mcs": 320, "mct": 6,  "mtp": True,  "cq": 3, "ndt": 3},
+    "I": {"mcs": 320, "mct": 6,  "mtp": True,  "cq": 3, "env": {"EXL3_MOE_PINNED_ARENA": "1"}},
 }
 
 BASE_ENV = {
@@ -183,6 +186,7 @@ def main():
         cfg = ROWS[letter]
         env = {k: v for k, v in os.environ.items()}
         env.update(BASE_ENV)
+        env.update(cfg.get("env") or {})
         cmd = [sys.executable, __file__, "--worker", "--row", letter, "--target", args.target,
                "--mcs", str(cfg["mcs"]), "--mct", str(cfg["mct"]), "--cq", str(cfg["cq"]),
                "--ctx", str(args.ctx)]
@@ -190,6 +194,8 @@ def main():
             cmd.append("--mtp")
         if args.ndt:
             cmd += ["--ndt", str(args.ndt)]
+        elif cfg.get("ndt"):
+            cmd += ["--ndt", str(cfg["ndt"])]
         print(f"=== row {letter}: {cfg} ===", flush = True)
         t0 = time.time()
         proc = subprocess.run(cmd, capture_output = True, text = True, env = env)

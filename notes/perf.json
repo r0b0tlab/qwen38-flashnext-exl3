@@ -139,5 +139,146 @@
       }
     ],
     "wall_s": 74.9
+  },
+  {
+    "row": "C",
+    "config": {
+      "mcs": 320,
+      "mct": 12,
+      "mtp": true,
+      "cq": 3,
+      "ndt": null
+    },
+    "load_s": 35.6,
+    "ttft_256tok_s": 3.533,
+    "mean_tok_per_s": 19.19,
+    "vram_used_gb": 22.4,
+    "results": [
+      {
+        "prompt": "What is 17*23? Show the multiplication s",
+        "new_tokens": 128,
+        "seconds": 6.83,
+        "tok_per_s": 18.75
+      },
+      {
+        "prompt": "Explain in detail how a refrigerator wor",
+        "new_tokens": 128,
+        "seconds": 4.45,
+        "tok_per_s": 28.78
+      },
+      {
+        "prompt": "Write a short story about a lighthouse k",
+        "new_tokens": 128,
+        "seconds": 12.02,
+        "tok_per_s": 10.65
+      },
+      {
+        "prompt": "Summarize the main causes of the French ",
+        "new_tokens": 128,
+        "seconds": 5.21,
+        "tok_per_s": 24.58
+      },
+      {
+        "prompt": "Write a Python function that reverses a ",
+        "new_tokens": 128,
+        "seconds": 9.7,
+        "tok_per_s": 13.2
+      }
+    ],
+    "wall_s": 86.8
+  },
+  {
+    "row": "D",
+    "config": {
+      "mcs": 360,
+      "mct": 6,
+      "mtp": true,
+      "cq": 3,
+      "ndt": null
+    },
+    "load_s": 42.9,
+    "ttft_256tok_s": 2.193,
+    "mean_tok_per_s": 30.71,
+    "vram_used_gb": 19.49,
+    "results": [
+      {
+        "prompt": "What is 17*23? Show the multiplication s",
+        "new_tokens": 128,
+        "seconds": 3.72,
+        "tok_per_s": 34.4
+      },
+      {
+        "prompt": "Explain in detail how a refrigerator wor",
+        "new_tokens": 128,
+        "seconds": 4.05,
+        "tok_per_s": 31.58
+      },
+      {
+        "prompt": "Write a short story about a lighthouse k",
+        "new_tokens": 128,
+        "seconds": 8.32,
+        "tok_per_s": 15.38
+      },
+      {
+        "prompt": "Summarize the main causes of the French ",
+        "new_tokens": 128,
+        "seconds": 3.53,
+        "tok_per_s": 36.31
+      },
+      {
+        "prompt": "Write a Python function that reverses a ",
+        "new_tokens": 128,
+        "seconds": 3.57,
+        "tok_per_s": 35.9
+      }
+    ],
+    "wall_s": 79.9
+  },
+  {
+    "row": "F",
+    "config": {
+      "mcs": 320,
+      "mct": 6,
+      "mtp": true,
+      "cq": 4,
+      "ndt": null
+    },
+    "load_s": 37.5,
+    "ttft_256tok_s": 4.261,
+    "mean_tok_per_s": 30.35,
+    "vram_used_gb": 22.41,
+    "results": [
+      {
+        "prompt": "What is 17*23? Show the multiplication s",
+        "new_tokens": 128,
+        "seconds": 4.93,
+        "tok_per_s": 25.98
+      },
+      {
+        "prompt": "Explain in detail how a refrigerator wor",
+        "new_tokens": 128,
+        "seconds": 3.29,
+        "tok_per_s": 38.86
+      },
+      {
+        "prompt": "Write a short story about a lighthouse k",
+        "new_tokens": 128,
+        "seconds": 6.92,
+        "tok_per_s": 18.49
+      },
+      {
+        "prompt": "Summarize the main causes of the French ",
+        "new_tokens": 128,
+        "seconds": 4.28,
+        "tok_per_s": 29.91
+      },
+      {
+        "prompt": "Write a Python function that reverses a ",
+        "new_tokens": 128,
+        "seconds": 3.32,
+        "tok_per_s": 38.53
+      }
+    ],
+    "wall_s": 74.8
   }
 ]
