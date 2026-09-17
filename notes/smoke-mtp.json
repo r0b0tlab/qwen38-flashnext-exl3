@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "target": "models/qwen38-flash-next-exl3-b250",
+    "draft": "mtp",
+    "n": 2,
+    "mean_acceptance_length": 4.055555555555555,
+    "mean_tok_per_s": 6.83916688960886,
+    "hit_token_cap": 1
+  },
+  "per_request": [
+    {
+      "new_tokens": 128,
+      "accepted_draft_tokens": 96,
+      "rejected_draft_tokens": 0,
+      "rounds": 32,
+      "acceptance_length": 4.0,
+      "tok_per_s": 7.132767485168514,
+      "time": 17.945348739624023
+    },
+    {
+      "new_tokens": 111,
+      "accepted_draft_tokens": 84,
+      "rejected_draft_tokens": 0,
+      "rounds": 27,
+      "acceptance_length": 4.111111111111111,
+      "tok_per_s": 6.545566294049205,
+      "time": 16.958043813705444
+    }
+  ]
+}
